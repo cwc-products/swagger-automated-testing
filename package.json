@@ -1,0 +1,21 @@
+{
+  "name": "swagger-api-tests",
+  "version": "1.0.0",
+  "description": "A test bed for loading in the swagger deffinition to create api tests.",
+  "main": "index.js",
+  "scripts": {
+    "generate-200s": "oatts generate -s ./swagger.yml -w ./test/oatts/200/tests --host localhost:3000 -S 200 -e",
+    "test-200s": "mocha --recursive test/oatts/200"
+  },
+  "author": "Me",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "chakram": "^1.5.0",
+    "express": "^4.16.3",
+    "hippie-swagger": "^3.2.0",
+    "mocha": "^5.2.0",
+    "oatts": "^1.2.3",
+    "swagger-parser": "^5.0.0"
+  }
+}
